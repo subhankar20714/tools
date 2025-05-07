@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get one useful daily tip - productivity hacks, free tools, health tips, and inspiring facts. No clutter, just valuable insights.">
+    <meta name="keywords" content="daily tip, productivity, health tips, free tools, life hacks, inspiration">
+    <meta name="author" content="Daily Tip">
+    <meta property="og:title" content="Daily Useful Tip - One Helpful Idea Each Day">
+    <meta property="og:description" content="Fresh daily tips to improve your productivity, health, and mindset.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dailytip.example.com">
+    <meta property="og:image" content="https://dailytip.example.com/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <title>Daily Useful Tip | Today's Helpful Idea</title>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #166088;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --light-text: #666;
+            --border-color: #e1e1e1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        nav a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        main {
+            flex: 1;
+            padding: 2rem 0;
+        }
+        
+        .tip-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .date {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            line-height: 1.3;
+        }
+        
+        .tip-content {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .category {
+            display: inline-block;
+            background-color: #f0f7ff;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ad-container {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            min-height: 90px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        footer {
+            background-color: white;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--light-text);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .subscribe {
+            margin: 2rem auto;
+            max-width: 500px;
+        }
+        
+        .subscribe h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .subscribe-form {
+            display: flex;
+        }
+        
+        .subscribe-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+        
+        .subscribe-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .subscribe-form button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav {
+                margin-top: 1rem;
+            }
+            
+            nav a {
+                margin: 0 0.5rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .subscribe-form {
+                flex-direction: column;
+            }
+            
+            .subscribe-form input {
+                border-radius: 4px;
+                margin-bottom: 0.5rem;
+            }
+            
+            .subscribe-form button {
+                border-radius: 4px;
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="/" class="logo">DailyTip</a>
+            <nav>
+                <a href="/archive">Archive</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="ad-container">
+            <!-- Google AdSense Banner Ad -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="BANNER_AD_SLOT"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <article class="tip-card">
+            <div class="date" id="current-date">Loading date...</div>
+            <span class="category" id="tip-category">Productivity</span>
+            <h1 id="tip-title">The 2-Minute Rule for Productivity</h1>
+            <div class="tip-content" id="tip-content">
+                <p>If a task takes less than two minutes to complete, do it immediately. This simple rule from David Allen's "Getting Things Done" helps prevent small tasks from piling up and becoming overwhelming.</p>
+                <p>Examples: replying to a short email, washing a few dishes, or making a quick phone call.</p>
+            </div>
+        </article>
+        
+        <div class="ad-container">
+            <!-- Google AdSense In-Article Ad -->
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="IN_ARTICLE_AD_SLOT"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <section class="subscribe">
+            <h3>Get Daily Tips in Your Inbox</h3>
+            <form class="subscribe-form" id="subscribe-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/archive">Tip Archive</a>
+                <a href="/submit-tip">Submit a Tip</a>
+            </div>
+            <p>&copy; <span id="current-year"></span> DailyTip. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Set current date
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = now.getFullYear();
+        
+        // Form submission
+        document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            // Here you would typically send this to your backend
+            alert(`Thanks for subscribing with ${email}! You'll receive your first tip tomorrow.`);
+            this.querySelector('input').value = '';
+        });
+        
+        // Structured data for SEO (JSON-LD)
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "DailyTip",
+            "url": "https://dailytip.example.com",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://dailytip.example.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        };
+        
+        const scriptTag = document.createElement('script');
+        scriptTag.type = 'application/ld+json';
+        scriptTag.text = JSON.stringify(structuredData);
+        document.head.appendChild(scriptTag);
+    </script>
+    
+    <!-- Analytics script would go here -->
+</body>
+</html>
